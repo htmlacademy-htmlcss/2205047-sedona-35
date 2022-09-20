@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Valerii Nedozym](https://up.htmlacademy.ru/htmlcss/35/user/2205047).
-* Наставник: `Неизвестно`.
+* Наставник: [Егор Глебов](https://htmlacademy.ru/profile/beast).
 
 ---
 
