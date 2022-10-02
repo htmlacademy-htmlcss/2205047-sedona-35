@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -21,23 +22,25 @@
         </ul>
         <ul class="navigation-list-user">
           <li class="navigation-item-user">
-            <a class="navigation-link-user" href="#"><img class="search" src="images/search.svg" width="20" height="20"
+            <a class="navigation-link-search" href="#"><img class="search" src="images/search.svg" width="20" height="20"
                 alt="Поиск"></a>
           </li>
           <li class="navigation-list-user">
-            <a class="navigation-link-user" href="#"><img class="favorites" src="images/favorites.svg" width="20"
+            <a class="navigation-link-favorites" href="#"><img class="favorites" src="images/favorites.svg" width="20"
                 height="20" alt="Избранное"></a>
           </li>
           <li class="navigation-list-user">
-            <a class="button" href="#">Хочу сюда</a>
+            <a class="navigation-link-user" href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-index">
+      <div class="welcome-part">
       <h1 class="visually-hidden">Курортный город "Седона"</h1>
+      <img src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Джорджию">
+      </div>
       <section class="greeting">
-        <img src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Джорджию">
         <h2>Седона — небольшой городок в Аризоне,заслуживающий большего!</h2>
         <p>Рассмотрим причины, по которым Седона круче,чем Гранд-Каньон!</p>
       </section>
@@ -49,13 +52,13 @@
         <img src="images/advantages-city.jpg" width="800" height="384" alt="Вид из окна на город">
       </section>
       <section class="advantages">
-        <ul class="advantages-list">
+        <ul class="advantages-list-travel">
           <li class="advantages-item">
             <h3>Небольшая площадь</h3>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
           <li class="advantages-item">
-            <h3>Красиваяvдорога</h3>
+            <h3>Красивая дорога</h3>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages-item">
@@ -95,6 +98,7 @@
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a href="#">Поиск гостицы в Седоне</a>
       </section>
+      <div class="subscribe-part">
       <h2>Подпишитесь на рассылку</h2>
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -102,6 +106,7 @@
         <input type="email" name="email" id="email" placeholder="Ваш e-mail">
         <button class="button" type="submit">Подписаться</button>
       </form>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="social-list>">
