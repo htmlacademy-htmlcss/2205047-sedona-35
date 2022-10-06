@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 24px;
   line-height: 28px;
@@ -22,9 +30,38 @@ body {
   color: #000000;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .page-header {
   color: #000000;
   background-color: #ffffff;
+}
+
+.logo {
+  margin-right: 28px;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 420px;
+}
+
+.navigation-list-user {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 300px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -49,13 +86,22 @@ body {
   text-align: center;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .welcome-part {
   background-image: url("../images/background-mountains.jpg");
   background-repeat: no-repeat;
   background-color: #000000;
   color: #ffffff;
   background-size: 100%, auto;
-  text-align: center;
+}
+
+.welcome-photo {
+  display: block;
+  margin: 0 auto;
 }
 
 .greeting h2 {
@@ -70,6 +116,17 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+}
+
+.advantages-list-travel {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.advantages-item {
+  width: 400px;
 }
 
 .attraction-item {
@@ -90,6 +147,13 @@ body {
 
 .advantages-list-travel .advantages-item:nth-child(2) {
   background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
 
 .advantages-item h3 {
@@ -113,7 +177,7 @@ body {
   background: rgba(131, 179, 211, 0.12);
 }
 
-.hotel-search b {
+.hotel-search h2 {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
@@ -136,7 +200,6 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #756157;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -148,6 +211,21 @@ body {
   background-color: #000000;
 }
 
+.subscribe-part h2 {
+  text-align: center;
+}
+
+.page-footer-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list {
+  width: 170px;
+}
+
 .phone {
   font-weight: 400;
   font-size: 40px;
@@ -156,6 +234,11 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  width: 620px;
+}
+
+.footer-logo {
+  width: 120px;
 }
 
 .filter-part {
@@ -184,6 +267,21 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.catalog-filter {
+  display: flex;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 150px;
+}
+
+.catalog-filter-price {
+  width: 550px;
 }
 
 .control-input {
