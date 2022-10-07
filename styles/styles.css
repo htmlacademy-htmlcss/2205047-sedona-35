@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/ptsans-400.woff2) format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,12 +10,13 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 html {
   height: 100%;
+  background-color:#F2F2F2;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 24px;
   line-height: 28px;
-  background-color: #ffffff;
+  background-color:
   color: #000000;
 }
 
@@ -34,9 +35,18 @@ body {
   flex-grow: 1;
 }
 
+.page-container {
+  background-color: #FFFFFF;
+}
+
 .page-header {
   color: #000000;
-  background-color: #ffffff;
+}
+
+.header-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .logo {
@@ -91,12 +101,14 @@ body {
   margin: 0 auto;
 }
 
-.welcome-part {
-  background-image: url("../images/background-mountains.jpg");
+.hero {
+  width: 1200px;
+  height: 485px;
+  margin: 0 auto;
+  background-image: url("../images/welcome-bottom.svg"), url("../images/background-mountains.jpg");
   background-repeat: no-repeat;
+  background-position: center bottom, center;
   background-color: #000000;
-  color: #ffffff;
-  background-size: 100%, auto;
 }
 
 .welcome-photo {
