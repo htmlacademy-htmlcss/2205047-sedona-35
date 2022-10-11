@@ -106,7 +106,7 @@ body {
   height: 485px;
   margin: 0 auto;
   background-image: url("../images/welcome-bottom.svg"), url("../images/background-mountains.jpg");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center;
   background-color: #000000;
 }
@@ -134,6 +134,10 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+}
+
+.attraction {
   display: flex;
 }
 
@@ -179,6 +183,17 @@ body {
   line-height: 21px;
   text-align: center;
   color: #333333;
+}
+
+.advantages-item {
+  position: relative;
+}
+
+.advantages-item::before {
+  content: "";
+  background-image: url("../images/icon-home.svg");
+  background-size: width: 75px height: 72px;
+  position: absolute;
 }
 
 .advantages-list .advantages-item:first-child {
@@ -404,7 +419,6 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-
 
 .subscribe-email {
   font-weight: 400;
