@@ -121,6 +121,8 @@ body {
   text-decoration: none;
   color: #000000;
   background-color: #ffffff;
+  width: 100px;
+  height: 64px;
 }
 
 .navigation-link-user {
@@ -346,9 +348,6 @@ body {
   padding-bottom: 104px;
 }
 
-.subscribe-form {
-}
-
 .subscribe-part h2 {
   margin: 0;
   text-align: center;
@@ -386,13 +385,13 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  background-color: #FFFFFF;
 }
 
 .page-footer-wrapper {
   width: 1060px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 30px;
@@ -401,10 +400,12 @@ body {
 .social-list {
   width: 190px;
   display: flex;
+  margin-right: 42px;
 }
 
 .social-list-item {
   width: 47px;
+  text-align: center;
 }
 
 .phone {
@@ -420,6 +421,7 @@ body {
 
 .footer-logo {
   width: 120px;
+  margin-left: auto;
 }
 
 .filter-part {
@@ -427,13 +429,23 @@ body {
   background-repeat: no-repeat;
   background-size: 100%, auto;
   color: #FFFFFF;
+}
 
+.filter-part-wrapper {
+  padding: 35px 70px 70px 70px;
 }
 
 .title-felter {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs {
+  margin-bottom: 40px;
+  display: flex;
 }
 
 .breadcrumbs-link {
@@ -442,6 +454,47 @@ body {
   line-height: 21px;
   color: #FFFFFF;
   text-decoration: none;
+  margin-right: 20px;
+}
+
+.sorting-product-wrapper {
+  padding: 50px 70px 40px 70px;
+  display: flex;
+  height: 50px;
+}
+
+.search-results {
+  margin: 0;
+  margin-right: 170px;
+}
+
+.select-control {
+  margin-right: 70px;
+  width: 292px;
+}
+
+.view-selector-part {
+  margin-left: auto;
+  display: flex;
+}
+
+.view-selector {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  text-align: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.view-selector:first-child {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.view-selector:last-child {
+  margin-right: 0;
 }
 
 .catalog-filter-title {
@@ -549,12 +602,50 @@ body {
   background-color: #F2F2F2;
 }
 
+.pagination {
+  display: flex;
+  padding: 40px 70px 60px 70px;
+}
+
+.pagination-link {
+  margin-right: 8px;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ellipsis {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-link:first-child {
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  color: #000000;
+}
+
+.pagination-link:last-child {
+  margin-right: 0;
+}
+
 .subscribe-catalog h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .subscribe-catalog p {
@@ -562,6 +653,9 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 .subscribe-catalog button {
