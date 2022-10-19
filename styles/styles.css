@@ -58,12 +58,15 @@ body {
 .logo {
   margin-left: 70px;
   margin-right: 30px;
+  align-self: flex-start;
 }
 
 .navigation {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  align-items: center;
+  min-height: 64px;
 }
 
 .navigation-list {
@@ -75,9 +78,7 @@ body {
   flex-wrap: wrap;
 }
 
-.navigation-item {
-  padding: 20px 16px;
-}
+
 
 .navigation-list-user {
   margin: 0;
@@ -101,11 +102,6 @@ body {
   text-align: center;
 }
 
-.navigation-item-user:last-child {
-  background-color: #756157;
-  border-radius: 4px;
-}
-
 .navigation-item-user {
  width: 160px;
  height: 36px;
@@ -114,6 +110,7 @@ body {
 }
 
 .navigation-link {
+  padding: 20px 16px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -121,11 +118,39 @@ body {
   text-decoration: none;
   color: #000000;
   background-color: #ffffff;
-  width: 100px;
-  height: 64px;
+}
+
+.navigation-link-current {
+  cursor: default;
+}
+
+.navigation-link-search {
+ padding: 22px 12px;
+}
+
+.navigation-link-favorites {
+  padding: 22px 12px;
+  position: relative;
+}
+
+.navigation-link-favorites::before {
+  content: '12';
+  font-size: 10px;
+  line-height: 20px;
+  color: #FFFFFF;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  top: 14px;
+  right: 4px;
+  bottom: 33px;
+  left: 20px;
 }
 
 .navigation-link-user {
+  padding: 8px 34px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -134,6 +159,8 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
+  background-color: #756157;
+  border-radius: 4px;
 }
 
 .page-container {
@@ -142,13 +169,14 @@ body {
 }
 
 .hero {
-  width: 1200px;
+  width: auto;
   height: 485px;
   margin: 0 auto;
   background-image: url("../images/welcome-bottom.svg"), url("../images/background-mountains.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center;
-  background-color: #000000;
+  background-position: 50% 100%, center;
+  background-color: #FFFFFF
+
 }
 
 .welcome-photo {
@@ -194,24 +222,10 @@ body {
 }
 
 .attraction-item {
-  width: 400px;
-}
-
-.advantages-item {
-  width: 400px;
-}
-
-.attraction-item {
   background-color: #82B3D3;
   color: #ffffff;
   text-align: center;
-}
-
-.attraction-item-wrapper {
-  width: 230px;
-  margin:0 auto;
-  margin-top: 92px;
-  margin-bottom: 111px;
+  padding: 92px 85px 111px 85px;
 }
 
 .attraction-item h3 {
@@ -238,11 +252,13 @@ body {
   list-style: none;
 }
 
-.advantages-item-travel-wrapper {
-  width: 230px;
-  margin: 0 auto;
-  margin-top: 103px;
-  margin-bottom: 121px;
+.advantages-item {
+  padding: 103px 85px 121px 85px;
+}
+
+.advantages-title-home::before {
+  content: '';
+  position: absolute;
 }
 
 .advantages-item-wrapper {
@@ -250,6 +266,7 @@ body {
   margin: 0 auto;
   margin-top: 80px;
   margin-bottom: 81px;
+  position: relative;
 }
 
 .advantages-item-wrapper .advantages-title {
@@ -273,11 +290,6 @@ body {
   margin: 0;
 }
 
-.advantages-item {
-  height: 384px;
-}
-
-
 .advantages-list .advantages-item:first-child {
   background: rgba(131, 179, 211, 0.12);
 }
@@ -286,9 +298,8 @@ body {
   background: rgba(131, 179, 211, 0.12);
 }
 
-.hotel-search-wrapper {
-  width: 592px;
-  margin: 96px auto;
+.hotel-search {
+  padding: 96px 304px;
 }
 
 .hotel-search h2 {
@@ -312,15 +323,10 @@ body {
 }
 
 .hotel-search-link-wrapper {
-  width: 376px;
-  height: 52px;
-  background-color: #756157;
-  border-radius: 4px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .hotel-search a {
-  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -328,7 +334,11 @@ body {
   color: #ffffff;
   text-decoration: none;
   padding: 8px 50px;
-  text-align: center;
+  width: 376px;
+  height: 52px;
+  background-color: #756157;
+  border-radius: 4px;
+  margin: 0 auto;
 }
 
 .subscribe-part {
@@ -337,21 +347,14 @@ body {
   background-size: 100%, auto;
   color: #FFFFFF;
   background-color: #000000;
-  height: 415px;
-}
-
-.subscribe-part-wrapper {
-  width: 684px;
-  height: 215px;
-  margin: 0 auto;
-  padding-top: 96px;
-  padding-bottom: 104px;
+  padding: 96px 258px 104px 258px;
 }
 
 .subscribe-part h2 {
   margin: 0;
   text-align: center;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .subscribe-part p {
@@ -362,22 +365,36 @@ body {
 
 .subscribe-form {
   display: flex;
+  border: none;
 }
 
 .subscribe-input-line {
   background-color: #F2F2F2;
   width: 452px;
   height: 52px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+input::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 14px 345px 14px 20px;
 }
 
 .subscribe-button {
+  border: none;
   width: 232px;
-  height: 58px;
+  height: 54px;
   background-color: #82B3D3;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-transform: uppercase;
 }
 
 .page-footer-container {
@@ -416,7 +433,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  width: 620px;
+  margin: 0 auto;
 }
 
 .footer-logo {
@@ -446,6 +463,12 @@ body {
 .breadcrumbs {
   margin-bottom: 40px;
   display: flex;
+  position: relative;
+}
+
+.breadcrums-home-icon::before {
+  content: '';
+  position: absolute;
 }
 
 .breadcrumbs-link {
@@ -471,6 +494,9 @@ body {
 .select-control {
   margin-right: 70px;
   width: 292px;
+  padding: 14px 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .view-selector-part {
@@ -495,6 +521,10 @@ body {
 
 .view-selector:last-child {
   margin-right: 0;
+}
+
+.view {
+  padding: 17px 16px;
 }
 
 .catalog-filter-title {
@@ -610,6 +640,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .product-card-button-favorites {
@@ -623,6 +654,7 @@ body {
   width: 140px;
   height: 37px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .product-card-button-favorites-active {
@@ -636,6 +668,7 @@ body {
   width: 140px;
   height: 37px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .stars-reiting-wrapper {
@@ -693,6 +726,10 @@ body {
 
 .pagination-link:last-child {
   margin-right: 0;
+}
+
+.subscribe-catalog {
+  padding: 96px 258px 104px 258px;
 }
 
 .subscribe-catalog h2 {
