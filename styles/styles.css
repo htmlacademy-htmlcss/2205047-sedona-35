@@ -43,6 +43,8 @@ body {
 
 .page-container {
   background-color: #FFFFFF;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .page-header {
@@ -50,20 +52,18 @@ body {
 }
 
 .header-container {
-  width: 1200px;
-  margin: 0 auto;
+  padding: 0 70px;
   background-color: #FFFFFF;
 }
 
 .logo {
-  margin-left: 70px;
-  margin-right: 30px;
   align-self: flex-start;
+  position: absolute;
+  z-index: 1;
 }
 
 .navigation {
   display: flex;
-  width: 1200px;
   margin: 0 auto;
   align-items: center;
   min-height: 64px;
@@ -76,20 +76,32 @@ body {
   width: 450px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 168px;
 }
 
+.navigation-item {
+  position: relative;
+}
 
+.navigation-link-current::after {
+  content: '';
+  position: absolute;
+  background-color: #756257;
+  height: 2px;
+  bottom: -18px;
+  left: 16px;
+  right: 16px;
+}
 
 .navigation-list-user {
   margin: 0;
   padding: 0;
   list-style-type: none;
   width: 268px;
-  margin-left: auto;
-  margin-right: 70px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-left: auto;
 }
 
 .navigation-item-user-search {
@@ -110,7 +122,7 @@ body {
 }
 
 .navigation-link {
-  padding: 20px 16px;
+  padding: 18px 16px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -163,11 +175,6 @@ body {
   border-radius: 4px;
 }
 
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .hero {
   width: auto;
   height: 485px;
@@ -176,7 +183,6 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 100%, center;
   background-color: #FFFFFF
-
 }
 
 .welcome-photo {
@@ -226,12 +232,24 @@ body {
   color: #ffffff;
   text-align: center;
   padding: 92px 85px 111px 85px;
+  position: relative;
+  width: 400px;
 }
 
 .attraction-item h3 {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 62px;
+}
+
+.attraction-item h3::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 178px;
+  left: 165px;
 }
 
 .attraction-item p {
@@ -253,32 +271,83 @@ body {
 }
 
 .advantages-item {
-  padding: 103px 85px 121px 85px;
+  padding: 92px 85px 121px 85px;
+  position: relative;
+  width: 400px;
 }
 
-.advantages-title-home::before {
+.advantages-item-home {
+  padding: 182px 85px 81px 85px;
+}
+
+.advantages-item-food {
+  padding: 182px 85px 81px 85px;
+}
+
+.advantages-item-present {
+  padding: 182px 85px 81px 85px;
+}
+
+.advantages-item-home::before {
   content: '';
   position: absolute;
+  background-image: url("../images/icon-home.svg");
+  width: 75px;
+  height: 72px;
+  background-repeat: no-repeat;
+  top: 80px;
+  left: 164px;
 }
 
-.advantages-item-wrapper {
-  width: 230px;
-  margin: 0 auto;
-  margin-top: 80px;
-  margin-bottom: 81px;
-  position: relative;
+.advantages-item-food::before {
+  content: '';
+  position: absolute;
+  background-image: url("../images/icon-food.svg");
+  width: 74px;
+  height: 70px;
+  background-repeat: no-repeat;
+  top: 80px;
+  left: 163px;
 }
 
-.advantages-item-wrapper .advantages-title {
-  margin-bottom: 30px;
+.advantages-item-present::before {
+  content: '';
+  position: absolute;
+  background-image: url("../images/icon-present.svg");
+  width: 64px;
+  height: 76px;
+  background-repeat: no-repeat;
+  top: 80px;
+  left: 164px;
 }
-
 
 .advantages-item h3 {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
   margin-bottom: 62px;
+}
+
+.advantages-item h3::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 178px;
+  left: 165px;
+}
+
+.advantages-item-home h3 {
+  margin-bottom: 30px;
+}
+
+.advantages-item-food h3 {
+  margin-bottom: 30px;
+}
+
+.advantages-item-present h3 {
+  margin-bottom: 30px;
 }
 
 .advantages-item p {
@@ -375,12 +444,11 @@ body {
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-}
-
-input::placeholder {
+  box-sizing: border-box;
+  padding: 14px 0 14px 20px;
+  outline: none;
   font-size: 18px;
   line-height: 24px;
-  padding: 14px 345px 14px 20px;
 }
 
 .subscribe-button {
