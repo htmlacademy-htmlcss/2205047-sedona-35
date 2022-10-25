@@ -1393,7 +1393,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .modal-container-close {
-  display: none;
+
 }
 
 .modal {
@@ -1420,10 +1420,27 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: #F2F2F2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/cross-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
+}
+
+.button-close-modal-icon {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button svg path:active {
+  background-color: #E6E6E6;
+  fill: rgba(0, 0, 0, 0.3)
 }
 
 .modal-title {
@@ -1452,19 +1469,6 @@ input[type="number"]::-webkit-inner-spin-button {
   left: 0;
 
 }
-
-.minus-icon-child {
-
-}
-
-.plus-icon-adults {
-
-}
-
-.plus-icon-child {
-
-}
-
 
 .calendar-icon-arrivel {
   position: absolute;
@@ -1556,9 +1560,13 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-right: 46px;
 }
 
-.filed-quantity-child {
+.field-quantity-child {
   position: relative;
   padding-right: 82px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
 }
 
 .input-field-data {
@@ -1628,6 +1636,18 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 14px;
 }
 
+.button-quantity-modal:hover path {
+  fill: #000000;
+}
+
+.button-quantity-modal:focus path {
+  fill: #000000;
+}
+
+.button-quantity-modal:focus {
+  outline:  3px solid #82B3D3;
+  border-radius: 4px;
+}
 
 .tex-error-arrivel {
   color: #FF5757;
