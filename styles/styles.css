@@ -93,6 +93,7 @@ body {
   right: 16px;
 }
 
+
 .navigation-list-user {
   margin: 0;
   padding: 0;
@@ -647,9 +648,9 @@ body {
 .filter-part {
   background-image: url("../images/filter-back.png");
   background-repeat: no-repeat;
-  background-size: 100%, auto;
   color: #FFFFFF;
   padding: 35px 70px 70px 70px;
+  height: auto;
 }
 
 .title-felter {
@@ -843,6 +844,10 @@ body {
   outline: none;
 }
 
+.view-selector-current {
+  border: 2px solid #000000;
+}
+
 .view-selector:hover {
   border: 2px solid #000000;
 }
@@ -905,7 +910,6 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
-  margin-bottom: 16px;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -964,6 +968,10 @@ body {
   padding: 0;
   list-style: none;
   width: 150px;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .control-input {
@@ -1055,7 +1063,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
-  margin-top: 48px;
+  margin-top: 36px;
   margin-bottom: 8px;
 }
 
@@ -1384,8 +1392,11 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
 }
 
-.modal {
+.modal-container-close {
   display: none;
+}
+
+.modal {
   position: relative;
   margin: 396px auto auto;
   padding: 64px 70px;
@@ -1437,63 +1448,23 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .minus-icon-adults {
   position: absolute;
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  top: 23px;
-  left: 167px;
-  cursor: pointer;
+  top: 0;
+  left: 0;
+
 }
 
 .minus-icon-child {
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  top: 23px;
-  left: 150px;
-  cursor: pointer;
+
 }
 
 .plus-icon-adults {
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 235px;
-  cursor: pointer;
-}
 
-.plus-icon-adults::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 14px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 6px;
-  top: -6px;
-  cursor: pointer;
 }
 
 .plus-icon-child {
-  position: absolute;
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 220px;
-  cursor: pointer;
+
 }
 
-.plus-icon-child::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 14px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 6px;
-  top: -6px;
-  cursor: pointer;
-}
 
 .calendar-icon-arrivel {
   position: absolute;
@@ -1562,7 +1533,6 @@ input[type="number"]::-webkit-inner-spin-button {
   outline: 2px solid #000000;
 }
 
-
 .input-field-quantity {
   font-weight: 700;
   font-size: 18px;
@@ -1578,6 +1548,19 @@ input[type="number"]::-webkit-inner-spin-button {
   box-sizing: border-box;
 }
 
+.filed-quantity-adults {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin-right: 46px;
+}
+
+.filed-quantity-child {
+  position: relative;
+  padding-right: 82px;
+}
+
 .input-field-data {
   width: 440px;
   height: 48px;
@@ -1589,14 +1572,60 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
 }
 
-
-.filed-quantity-adults {
-  margin-right: 46px;
+.button-minus-adults {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  left: 150px;
 }
 
+.button-minus-icon path {
+  fill: rgba(117, 97, 87, 0.3);
+}
 
-.filed-quantity-child {
-  margin-right: 82px;
+.button-plus-adults {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 14px;
+  left: 216px;
+}
+
+.button-plus-icon path {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.button-minus-child {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  left: 148px;
+  top: 14px;
+}
+
+.button-plus-child {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  left: 215px;
+  top: 14px;
 }
 
 
@@ -1646,4 +1675,58 @@ input[type="number"]::-webkit-inner-spin-button {
 .button-form-search-hotel:active {
   background-color: #68A2CA;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.tooltip {
+  display: none;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 65px;
+  top: 2px;
+}
+
+.tooltip-toogle {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 256px;
+  box-sizing: border-box;
+  display: block;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  padding: 15px 18px 18px 22px;
+  position: absolute;
+  top: 41px;
+  left: -122px;
+  z-index: 1;
+}
+
+.tooltip-text::before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  display: block;
+  background-color: #333333;
+  transform: rotate(45deg);
+  left: 118px;
+  top: -8px
 }
