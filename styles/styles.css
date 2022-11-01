@@ -82,7 +82,7 @@ body {
 }
 
 .navigation-item {
-  position: relative;
+  display: flex;
 }
 
 .navigation-link-current::after {
@@ -90,7 +90,7 @@ body {
   position: absolute;
   background-color: #756257;
   height: 2px;
-  bottom: -18px;
+  bottom: -2px;
   left: 16px;
   right: 16px;
 }
@@ -116,6 +116,10 @@ body {
 
 .navigation-link-user:active {
   color: rgba(255, 255, 255, 0.3)
+}
+
+.navigation-link-user:disabled {
+  background-color: #E5E5E5;
 }
 
 .navigation-item-user-search {
@@ -148,6 +152,7 @@ body {
 
 .navigation-link-current {
   cursor: default;
+  position: relative;
 }
 
 .navigation-link-search {
@@ -236,6 +241,11 @@ body {
 
 .attraction {
   display: flex;
+}
+
+.attraction img {
+  object-fit: cover;
+  height: auto;
 }
 
 .attraction-item {
@@ -498,7 +508,7 @@ body {
 .subscribe-part {
   background: url("../images/Subscribe-back.png");
   background-repeat: no-repeat;
-  background-size: 100%, auto;
+  background-size: cover;
   color: #FFFFFF;
   background-color: #000000;
   padding: 96px 258px 104px 258px;
@@ -571,6 +581,10 @@ body {
 
 .subscribe-button:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-button:disabled {
+  background-color: #E5E5E5;
 }
 
 /* ---------------------------- Footer ----------------------------------------------------------------------- */
@@ -786,7 +800,7 @@ body {
 }
 
 .control-services:focus .control-mark {
-  box-shadow:0 0 0 3px #83B3D3;
+  box-shadow: 0 0 0 3px #83B3D3;
 }
 
 .control-services:active .control-mark {
@@ -1070,6 +1084,11 @@ input[type="number"]::-webkit-inner-spin-button {
   box-shadow:0 0 0 2px  #3F5E72;
 }
 
+.select-control:disabled {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .select-control-wrapper {
   position: relative;
 }
@@ -1217,6 +1236,27 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .product-card-button-more:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.four-stars {
+  background-image: url("../images/star.png");
+  background-repeat: space;
+  width: 82px;
+  height: 17px;
+}
+
+.three-stars {
+  background-image: url("../images/star.png");
+  background-repeat: space;
+  width: 62px;
+  height: 17px;
+}
+
+.two-stars {
+  background-image: url("../images/star.png");
+  background-repeat: space;
+  width: 40px;
+  height: 17px;
 }
 
 .product-card-button-favorites {
