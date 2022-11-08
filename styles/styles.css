@@ -1106,24 +1106,36 @@ body {
 }
 
 .sorting-product {
-  padding: 50px 70px 40px 70px;
+  padding: 50px 70px 30px 70px;
   display: flex;
   position: relative;
 }
 
 .search-results {
   margin: 0;
-  margin-right: 170px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   color: #000000;
   padding: 6px 0;
+  width: 338px;
+  display: block;
+}
+
+.search-results-wrapper {
+  display: flex;
+}
+
+.quantity-hotels {
+  display: block;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
 }
 
 .select-control {
-  margin-left: 30px;
   width: 292px;
   padding: 12px 18px;
   border: 2px solid #e5e5e5;
@@ -1158,6 +1170,7 @@ body {
 
 .select-control-wrapper {
   position: relative;
+  margin-left: 200px;
 }
 
 .select-control-wrapper::before {
@@ -1167,7 +1180,7 @@ body {
   width: 12px;
   height: 9px;
   top: 20px;
-  left: 290px;
+  left: 260px;
   pointer-events: none;
 }
 
@@ -1175,17 +1188,22 @@ body {
   margin-left: auto;
   display: flex;
   flex-wrap: wrap;
+  width: 170px;
 }
 
 .view-selector {
   display: block;
   width: 44px;
   height: 44px;
-  margin-right: 8px;
+  margin-bottom: 8px;
   text-align: center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   outline: none;
+}
+
+.view-selector:not(:last-child) {
+  margin-right: 8px;
 }
 
 .view-selector-table-current {
@@ -1527,7 +1545,7 @@ body {
 }
 
 .subscribe-catalog button {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border: none;
   font-weight: 700;
   font-size: 20px;
@@ -1569,7 +1587,7 @@ body {
 }
 
 .modal-search-hotel {
-  background-color:  #FFFFFF;
+  background-color:  #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   position: fixed;
@@ -1614,7 +1632,7 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -1868,7 +1886,7 @@ body {
 }
 
 .text-error-arrivel {
-  color: #FF5757;
+  color: #ff5757;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
