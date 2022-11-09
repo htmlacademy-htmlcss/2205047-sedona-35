@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   </head>
   <body>
@@ -11,7 +12,7 @@
       <header class="page-header">
         <div class="header-container">
           <nav class="navigation">
-            <a class="logo" href="/"><img src="images/logo.svg" width="140" height="70" alt="logo."></a>
+            <a class="logo" href="/"><img src="images/logo.svg" width="140" height="70" alt="Логотип."></a>
             <ul class="navigation-list">
               <li class="navigation-item">
                 <a class="navigation-link" href="#">Главная</a>
@@ -106,10 +107,10 @@
                   <div class="range-scale">
                     <div class="range-bar" style="width: 226px;">
                       <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">Ползунок минимальной стоимости</span>
+                        <span class="visually-hidden">Устанавливает минимальную стоимость.</span>
                       </button>
                       <button class="range-toggle toggle-max" type="button">
-                        <span class="visually-hidden">Ползунок максимальной стоимости</span>
+                        <span class="visually-hidden">Устанавливает максимальную стоимость.</span>
                       </button>
                     </div>
                   </div>
@@ -122,21 +123,24 @@
             </form>
           </section>
         </div>
-        <div class="sorting-product">
-          <p class="search-results">Найдено гостиниц: 38</p>
+        <section class="sorting-product">
+          <h2 class="search-results">Найдено гостиниц: 38</h2>
           <div class="select-control-wrapper">
-            <select class="select-control" aria-label="Сортировка">
+            <select class="select-control" aria-label="Сортировка.">
               <option value="popular">Сначала популярное</option>
               <option value="cheap" selected>Сначала дешевые</option>
               <option value="expensive">Сначала дорогое</option>
             </select>
           </div>
           <div class="view-selector-part">
-            <a class="view-selector view-selector-table-current" href="#"></a>
-            <a class="view-selector view-selector-slideshow" href="#"></a>
-            <a class="view-selector view-selector-list" href="#"></a>
+            <a class="view-selector view-selector-table-current" href="#"><span class="visually-hidden">Показать
+                карточки</span></a>
+            <a class="view-selector view-selector-slideshow" href="#"><span class="visually-hidden">Показать карточки и
+                описание</span></a>
+            <a class="view-selector view-selector-list" href="#"><span class="visually-hidden">Показать
+                список</span></a>
           </div>
-        </div>
+        </section>
         <section class="product-cards-list">
           <h2 class="visually-hidden">Результаты поиска отелей</h2>
           <section class="product-card">
@@ -245,7 +249,7 @@
       <footer class="page-footer">
         <div class="social-list">
           <a class="social-list-item" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Логотип Вконтакте</span>
+            <span class="visually-hidden">Открывает страницу HTML Academy на сайте Вконтакте.</span>
             <svg class="social-list-logo" aria-hidden="true" focusable="false" width="25" height="15"
               viewBox="0 0 25 15" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -254,7 +258,7 @@
             </svg>
           </a>
           <a class="social-list-item" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Логотип Телеграм</span>
+            <span class="visually-hidden">Открывает страницу HTML Academy в приложении Телеграм.</span>
             <svg class="social-list-logo" aria-hidden="true" focusable="false" width="18" height="16"
               viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -263,7 +267,7 @@
             </svg>
           </a>
           <a class="social-list-item" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Логотип Ютуб</span>
+            <span class="visually-hidden">Открывает страницу HTML Academy на сайте Ютуб.</span>
             <svg class="social-list-logo" aria-hidden="true" focusable="false" width="23" height="18"
               viewBox="0 0 23 18" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -274,7 +278,7 @@
         </div>
         <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="footer-logo-link" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Логотип Html Academy</span>
+          <span class="visually-hidden">Ссылка на сайт Html Academy</span>
           <svg class="footer-logo-icon" aria-hidden="true" focusable="false" width="115" height="34"
             viewBox="0 0 115 34" xmlns="http://www.w3.org/2000/svg">
             <path

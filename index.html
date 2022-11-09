@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
   </head>
   <body>
@@ -11,7 +12,7 @@
       <header class="page-header">
         <div class="header-container">
           <nav class="navigation">
-            <a class="logo" href="#"><img src="images/logo.svg" width="140" height="70" alt="logo"></a>
+            <a class="logo" href="#"><img src="images/logo.svg" width="140" height="70" alt="Логотип."></a>
             <ul class="navigation-list">
               <li class="navigation-item">
                 <a class="navigation-link navigation-link-current" href="#">Главная</a>
@@ -20,7 +21,7 @@
                 <a class="navigation-link" href="#">О Седоне</a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link" href="/catalog.html">Гостиницы</a>
+                <a class="navigation-link" href="catalog.html">Гостиницы</a>
               </li>
             </ul>
             <ul class="navigation-list-user">
@@ -99,7 +100,7 @@
         <section class="hotel-search">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="hotel-search-botton" href="#">Поиск гостиницы в Седоне</a>
+          <a class="hotel-search-botton" href="catalog.html">Поиск гостиницы в Седоне</a>
         </section>
         <div class="subscribe-part">
           <h2>Подпишитесь на рассылку</h2>
@@ -114,7 +115,7 @@
       <footer class="page-footer">
         <div class="social-list">
           <a class="social-list-item" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Логотип Вконтакте</span>
+            <span class="visually-hidden">Открывает страницу HTML Academy на сайте Вконтакте.</span>
             <svg class="social-list-logo" aria-hidden="true" focusable="false" width="25" height="15"
               viewBox="0 0 25 15" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -123,7 +124,7 @@
             </svg>
           </a>
           <a class="social-list-item" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Логотип телеграм</span>
+            <span class="visually-hidden">Открывает страницу HTML Academy в приложении Телеграм.</span>
             <svg class="social-list-logo" aria-hidden="true" focusable="false" width="18" height="16"
               viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -132,7 +133,7 @@
             </svg>
           </a>
           <a class="social-list-item" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Логотип Ютуб</span>
+            <span class="visually-hidden">Открывает страницу HTML Academy на сайте Ютуб.</span>
             <svg class="social-list-logo" aria-hidden="true" focusable="false" width="22" height="17"
               viewBox="0 0 23 18" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -143,7 +144,7 @@
         </div>
         <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="footer-logo-link" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Логотип Html Academy</span>
+          <span class="visually-hidden">Ссылка на сайт Html Academy</span>
           <svg class="footer-logo-icon" aria-hidden="true" focusable="false" width="115" height="34"
             viewBox="0 0 115 34" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -155,8 +156,7 @@
     </div>
     <div class="modal-container modal-container-close">
       <div class="modal modal-search-hotel">
-        <button class="button-close-modal" type="button">
-          <span class="visually-hidden">Закрыть модальное окно</span>
+        <button class="button-close-modal" type="button" aria-label="Закрывает модальное окно.">
           <svg class="button-close-modal-icon" width="15" height="14" viewBox="0 0 15 14"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -205,8 +205,8 @@
             </div>
             <div class="number-people-wrapper">
               <p class="field-group field-group-number">
-                <button class="button-quantity-adults button-minus-adults" type="button">
-                  <span class="visually-hidden">Кнопка минус</span>
+                <button class="button-quantity-adults button-minus-adults" type="button"
+                  aria-label="Убирает взрослого.">
                   <svg class="button-minus-icon" width="21" height="20" viewBox="0 0 21 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.4 9v2h14V9h-14Z" fill="#000" />
@@ -215,8 +215,8 @@
                 <label class="field-quantity filed-quantity-adults" for="number-adults">Взрослые:</label>
                 <input class="input-field-quantity input-quantity-adults" type="number" id="number-adults" value="2"
                   required>
-                <button class="button-quantity-adults button-plus-adults" type="button">
-                  <span class="visually-hidden">Кнопка плюс</span>
+                <button class="button-quantity-adults button-plus-adults" type="button"
+                  aria-label="Добавляет взрослого.">
                   <svg class="button-plus-icon" width="20" height="20" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
@@ -238,8 +238,7 @@
                       18 лет. Дети до 6 лет размещаются бесплатно.</span>
                   </span>
                 </span>
-                <button class="button-quantity-children button-minus-child" type="button">
-                  <span class="visually-hidden">Кнопка минус</span>
+                <button class="button-quantity-children button-minus-child" type="button" aria-label="Убирает ребенка.">
                   <svg class="button-minus-icon" width="21" height="20" viewBox="0 0 21 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.4 9v2h14V9h-14Z" fill="#000" />
@@ -247,8 +246,8 @@
                 </button>
                 <input class="input-field-quantity input-quantity-child" type="number" id="number-child" value="2"
                   required>
-                <button class="button-quantity-children button-plus-child" type="button">
-                  <span class="visually-hidden">Кнопка плюс</span>
+                <button class="button-quantity-children button-plus-child" type="button"
+                  aria-label="Добавляет ребенка.">
                   <svg class="button-plus-icon" width="20" height="20" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#000" />
